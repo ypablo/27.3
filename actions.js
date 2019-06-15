@@ -19,7 +19,7 @@ function editComment(text) {
     return {
         type: EDIT_COMMENT,
         text,
-        id: uuid.v4(),
+        id: id,
         rating: rating
     }
 }
@@ -27,14 +27,14 @@ function editComment(text) {
 function remComment(text) {
     return {
         type: REMOVE_COMMENT,
-        id: uuid.v4()
+        id: id
     }
 }
 
 function upComment(text) {
     return {
         type: THUMB_UP_COMMENT,
-        id: uuid.v4(),
+        id: id,
         rating: rating + 1
     }
 }
@@ -42,7 +42,7 @@ function upComment(text) {
 function downComment(text) {
     return {
         type: THUMB_DOWN_COMMENT,
-        id: uuid.v4(),
+        id: id,
         rating: rating - 1
     }
 }
