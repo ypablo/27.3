@@ -24,14 +24,14 @@ function editComment(text) {
     }
 }
 
-function remComment(text) {
+function remComment(id) {
     return {
         type: REMOVE_COMMENT,
         id: id
     }
 }
 
-function upComment(text) {
+function upComment(rating) {
     return {
         type: THUMB_UP_COMMENT,
         id: id,
@@ -39,7 +39,7 @@ function upComment(text) {
     }
 }
 
-function downComment(text) {
+function downComment(rating) {
     return {
         type: THUMB_DOWN_COMMENT,
         id: id,
