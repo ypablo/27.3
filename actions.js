@@ -11,7 +11,7 @@ function addComment(text) {
         type: ADD_COMMENT,
         text,
         id: uuid.v4(),
-        rating: 0
+        votes: 0
     }
 }
 
@@ -20,7 +20,7 @@ function editComment(text) {
         type: EDIT_COMMENT,
         text,
         id: id,
-        rating: rating
+        votes: votes
     }
 }
 
@@ -35,7 +35,7 @@ function upComment(rating) {
     return {
         type: THUMB_UP_COMMENT,
         id: id,
-        rating: rating + 1
+        votes: votes + 1
     }
 }
 
@@ -43,6 +43,6 @@ function downComment(rating) {
     return {
         type: THUMB_DOWN_COMMENT,
         id: id,
-        rating: rating - 1
+        votes: votes - 1
     }
 }
