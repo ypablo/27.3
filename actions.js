@@ -18,13 +18,11 @@ function addComment(text) {
 function editComment(text) {
     return {
         type: EDIT_COMMENT,
-        text,
-        id: id,
-        votes: votes
+        id: id
     }
 }
 
-function remComment(id) {
+function removeComment(id) {
     return {
         type: REMOVE_COMMENT,
         id: id
@@ -35,7 +33,6 @@ function upComment(rating) {
     return {
         type: THUMB_UP_COMMENT,
         id: id,
-        votes: votes + 1
     }
 }
 
@@ -43,6 +40,5 @@ function downComment(rating) {
     return {
         type: THUMB_DOWN_COMMENT,
         id: id,
-        votes: votes - 1
     }
 }
