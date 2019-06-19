@@ -14,31 +14,31 @@ function addComment(text) {
         votes: 0
     }
 }
-function editComment(newText, id) {
+function editComment(Text, id) {
     return {
         type: EDIT_COMMENT,
-        id: addComment() {return id;},
-        newText
+        id,
+        Text
     }
 }
 
 function removeComment(id) {
     return {
         type: REMOVE_COMMENT,
-        id: addComment() {return id;}
+        id
     }
 }
 
 function upComment(id) {
     return {
         type: THUMB_UP_COMMENT,
-        id: addComment() {return id;}
+        id
     }
 }
 
 function downComment(id) {
     return {
         type: THUMB_DOWN_COMMENT,
-        id: addComment() {return id;}
+        id
     }
 }
